@@ -19,6 +19,8 @@ signals:
 public slots:
 	
 private:
+	QString parseSection(const QString &from, const int pos, const bool brackets = false);
+
 	QString name;
 	QString date;
 	QString author;

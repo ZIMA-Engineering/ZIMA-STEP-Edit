@@ -7,11 +7,13 @@ SettingsDialog::SettingsDialog(QWidget *parent) :
 {
 	ui->setupUi(this);
 
+	settings = new QSettings("ZIMA-Construction", "ZIMA-STEP-Edit", this);
+
 #ifdef Q_OS_WIN32
 	contextMenuSettings = new QSettings("HKEY_CLASSES_ROOT\\Directory\\shell", QSettings::NativeFormat, this);
 	connect(ui->enableSystemContextMenuCheckBox, SIGNAL(toggled(bool)), this, SLOT(enableSystemContextMenuChanged(bool)));
 
-	bool enabled = settings->value("enableDirectoryContextMenu", true).toBool();
+	bool enabled = settings->value("EnableDirectoryContextMenu", true).toBool();
 	ui->enableSystemContextMenuCheckBox->setChecked(enabled);
 
 	if( enabled )

@@ -56,12 +56,11 @@ void FileEditThread::run()
 						fileName.remove(0, 9);
 						fileName.trimmed().remove(0, 1);
 
-						oldName = fileName.section(',', 0, 0).trimmed().remove(0, 1);
-						oldName.chop(1);
+						oldName = parseSection(fileName, 0);
 
 						qDebug() << "Not changing old name" << oldName;
 
-						newFileName = QString("FILE_NAME('%1',\n'%2',\n('%3'),\n('%4'),\n'%5',\n'%6','');")
+						newFileName = QString("FILE_NAME('%1',\n '%2',\n ('%3'),\n ('%4'),\n '%5',\n '%6','');")
 								.arg(oldName)
 								.arg(date)
 								.arg(author)
@@ -127,31 +126,36 @@ QStringList FileEditThread::readValues(QString path)
 
 			if(line.endsWith(");"))
 			{
-				qDebug() << "Got" << fileName;
+				//qDebug() << "Got" << fileName;
 
+				// Remove starting FILE_NAME and bracket
 				fileName.remove(0, 9);
 				fileName.trimmed().remove(0, 1);
 
-				qDebug() << "Removed 10 chars" << fileName;
+//				QString name = fileName.section(',', 0, 0).trimmed().remove(0, 1);
+//				name.chop(1);
+//				QString date = fileName.section(',', 1, 1).trimmed().remove(0, 1);
+//				date.chop(1);
+//				QString author = fileName.section(',', 2, 2).trimmed();
+//				author.remove(0, 1+author.indexOf('\''));
+//				author.chop(author.count()-author.lastIndexOf('\''));
 
-				QString name = fileName.section(',', 0, 0).trimmed().remove(0, 1);
-				name.chop(1);
-				QString date = fileName.section(',', 1, 1).trimmed().remove(0, 1);
-				date.chop(1);
-				QString author = fileName.section(',', 2, 2).trimmed();
-				author.remove(0, 1+author.indexOf('\''));
-				author.chop(author.count()-author.lastIndexOf('\''));
+//				QString organization = fileName.section(',', 2, 2).trimmed();
+//				organization.remove(0, 1+organization.indexOf('\''));
+//				organization.chop(organization.count()-organization.lastIndexOf('\''));
 
-				QString organization = fileName.section(',', 2, 2).trimmed();
-				organization.remove(0, 1+organization.indexOf('\''));
-				organization.chop(organization.count()-organization.lastIndexOf('\''));
+//				QString cad = fileName.section(',', 4, 4).trimmed().remove(0, 1);
+//				cad.chop(1);
 
-				QString cad = fileName.section(',', 4, 4).trimmed().remove(0, 1);
-				cad.chop(1);
+//				res << name << date << author << organization << cad;
 
-				res << name << date << author << organization << cad;
+				res << parseSection(fileName, 0)
+				       << parseSection(fileName, 1)
+				       << parseSection(fileName, 2, true)
+				       << parseSection(fileName, 3, true)
+				       << parseSection(fileName, 4);
 
-				qDebug() << "Found" << res;
+				//qDebug() << "Found" << res;
 
 				foundStart = false;
 			}
@@ -179,4 +183,20 @@ void FileEditThread::setValues(QString name, QString date, QString author, QStri
 void FileEditThread::setFileList(QStringList *files)
 {
 	this->files = files;
+}
+
+QString FileEditThread::parseSection(const QString &from, const int pos, const bool brackets)
+{
+	QString section = from.section(',', pos, pos).trimmed();
+
+	if(brackets)
+	{
+		section.remove(0, 1+section.indexOf('('));
+		section.chop(section.count()-section.lastIndexOf(')'));
+	}
+
+	section.remove(0, 1+section.indexOf('\''));
+	section.chop(section.count()-section.lastIndexOf('\''));
+
+	return section;
 }
