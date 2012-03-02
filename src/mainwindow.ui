@@ -14,8 +14,8 @@
    <string>ZIMA-STEP-Edit BETA</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="zima-step-edit.qrc">
-    <normaloff>:/icon.png</normaloff>:/icon.png</iconset>
+   <iconset resource="../zima-step-edit.qrc">
+    <normaloff>:/gfx/icon.png</normaloff>:/gfx/icon.png</iconset>
   </property>
   <property name="unifiedTitleAndToolBarOnMac">
    <bool>false</bool>
@@ -210,7 +210,7 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
-  <include location="zima-step-edit.qrc"/>
+  <include location="../zima-step-edit.qrc"/>
  </resources>
  <connections/>
 </ui>
