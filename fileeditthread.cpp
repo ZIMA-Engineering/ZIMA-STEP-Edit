@@ -38,7 +38,7 @@ void FileEditThread::run()
 		{
 			QString line = streamIn.readLine();
 
-			if(!edited && line.startsWith("FILE_NAME("))
+			if(!edited && line.startsWith("FILE_NAME"))
 			{
 				foundStart = true;
 				fileName += line;
@@ -53,7 +53,8 @@ void FileEditThread::run()
 					{
 						QString oldName;
 
-						fileName.remove(0, 10);
+						fileName.remove(0, 9);
+						fileName.trimmed().remove(0, 1);
 
 						oldName = fileName.section(',', 0, 0).trimmed().remove(0, 1);
 						oldName.chop(1);
@@ -128,7 +129,8 @@ QStringList FileEditThread::readValues(QString path)
 			{
 				qDebug() << "Got" << fileName;
 
-				fileName.remove(0, 10);
+				fileName.remove(0, 9);
+				fileName.trimmed().remove(0, 1);
 
 				qDebug() << "Removed 10 chars" << fileName;
 
@@ -136,10 +138,14 @@ QStringList FileEditThread::readValues(QString path)
 				name.chop(1);
 				QString date = fileName.section(',', 1, 1).trimmed().remove(0, 1);
 				date.chop(1);
-				QString author = fileName.section(',', 2, 2).trimmed().remove(0, 2);
-				author.chop(2);
-				QString organization = fileName.section(',', 3, 3).trimmed().remove(0, 2);
-				organization.chop(2);
+				QString author = fileName.section(',', 2, 2).trimmed();
+				author.remove(0, 1+author.indexOf('\''));
+				author.chop(author.count()-author.lastIndexOf('\''));
+
+				QString organization = fileName.section(',', 2, 2).trimmed();
+				organization.remove(0, 1+organization.indexOf('\''));
+				organization.chop(organization.count()-organization.lastIndexOf('\''));
+
 				QString cad = fileName.section(',', 4, 4).trimmed().remove(0, 1);
 				cad.chop(1);
 
@@ -149,7 +155,7 @@ QStringList FileEditThread::readValues(QString path)
 
 				foundStart = false;
 			}
-		} else if(line.startsWith("FILE_NAME("))
+		} else if(line.startsWith("FILE_NAME"))
 		{
 			foundStart = true;
 			fileName += line;
