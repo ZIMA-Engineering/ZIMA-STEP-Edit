@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>gfx/icon.png</file>
+        <file>gfx/dir.xpm</file>
     </qresource>
 </RCC>

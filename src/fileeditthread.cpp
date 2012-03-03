@@ -60,7 +60,7 @@ void FileEditThread::run()
 
 						qDebug() << "Not changing old name" << oldName;
 
-						newFileName = QString("FILE_NAME('%1',\n '%2',\n ('%3'),\n ('%4'),\n '%5',\n '%6','');")
+						newFileName = QString("FILE_NAME('%1',\r\n '%2',\r\n ('%3'),\r\n ('%4'),\r\n '%5',\r\n '%6','');")
 								.arg(oldName)
 								.arg(date)
 								.arg(author)
@@ -77,13 +77,13 @@ void FileEditThread::run()
 								.arg(cad);
 					}
 
-					streamOut << newFileName << "\n";
+					streamOut << newFileName << "\r\n";
 
 					edited = true;
 					foundStart = false;
 				}
 			} else {
-				streamOut << line << "\n";
+				streamOut << line << "\r\n";
 			}
 		}
 

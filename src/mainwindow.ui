@@ -10,6 +10,12 @@
     <height>584</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
   <property name="windowTitle">
    <string>ZIMA-STEP-Edit BETA</string>
   </property>
@@ -35,20 +41,20 @@
        <widget class="QLineEdit" name="pathLineEdit"/>
       </item>
       <item>
-       <widget class="QToolButton" name="browseButton">
+       <widget class="QPushButton" name="browseButton">
         <property name="text">
-         <string>...</string>
+         <string>&amp;Browse</string>
         </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="searchButton">
-        <property name="text">
-         <string>&amp;Search files</string>
+        <property name="icon">
+         <iconset resource="../zima-step-edit.qrc">
+          <normaloff>:/gfx/dir.xpm</normaloff>:/gfx/dir.xpm</iconset>
         </property>
        </widget>
       </item>
      </layout>
+    </item>
+    <item>
+     <widget class="QListWidget" name="fileListWidget"/>
     </item>
     <item>
      <widget class="QCheckBox" name="subdirsCheckBox">
@@ -56,26 +62,16 @@
        <string>&amp;Including subdirectories</string>
       </property>
       <property name="checked">
-       <bool>true</bool>
+       <bool>false</bool>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QListWidget" name="fileListWidget"/>
-    </item>
-    <item>
      <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
-       <widget class="QPushButton" name="selectAllButton">
+       <widget class="QPushButton" name="optionsButton">
         <property name="text">
-         <string>Select &amp;all</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="selectNoneButton">
-        <property name="text">
-         <string>Select &amp;none</string>
+         <string>&amp;Options</string>
         </property>
        </widget>
       </item>
@@ -93,9 +89,16 @@
        </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="optionsButton">
+       <widget class="QPushButton" name="selectAllButton">
         <property name="text">
-         <string>&amp;Options</string>
+         <string>Select &amp;all</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="selectNoneButton">
+        <property name="text">
+         <string>Select &amp;none</string>
         </property>
        </widget>
       </item>
@@ -166,20 +169,27 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
-       <spacer name="horizontalSpacer_2">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
+       <widget class="QLabel" name="statusText">
+        <property name="text">
+         <string/>
         </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
+       </widget>
+      </item>
+      <item>
+       <widget class="QProgressBar" name="progressBar">
+        <property name="value">
+         <number>24</number>
         </property>
-       </spacer>
+       </widget>
       </item>
       <item>
        <widget class="QPushButton" name="editButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="text">
          <string>&amp;Edit</string>
         </property>
@@ -187,8 +197,14 @@
       </item>
       <item>
        <widget class="QPushButton" name="aboutButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="text">
-         <string>A&amp;bout...</string>
+         <string>Abou&amp;t...</string>
         </property>
        </widget>
       </item>
@@ -206,7 +222,6 @@
     </rect>
    </property>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>

@@ -29,11 +29,13 @@ public slots:
 	void finished();
 	void searchFinished();
 
+protected:
+	void closeEvent(QCloseEvent *event);
+
 private:
 	void loadValues(QString path);
 
 	Ui::MainWindow *ui;
-	QProgressBar *progressBar;
 	FileFinderThread fileFinder;
 	FileEditThread fileEdit;
 	QStringList filesToEdit;
@@ -48,6 +50,7 @@ private slots:
 	void edit();
 	void about();
 	void checkItems();
+	void abortAction();
 };
 
 #endif // MAINWINDOW_H

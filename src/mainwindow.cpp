@@ -13,20 +13,15 @@ MainWindow::MainWindow(QWidget *parent) :
 {
 	ui->setupUi(this);
 
+	ui->progressBar->hide();
+	ui->browseButton->setFocus(Qt::OtherFocusReason);
+
 	QStringList args = QApplication::arguments();
 
-	if(args.count() > 1)
-		ui->pathLineEdit->setText(args[1]);
-	else
-		ui->pathLineEdit->setText(QDir::homePath());
-
-	progressBar = new QProgressBar(this);
-	progressBar->hide();
-
-	ui->statusBar->addWidget(progressBar, 100);
-
-	connect(ui->searchButton, SIGNAL(clicked()), this, SLOT(findFiles()));
+	//connect(ui->searchButton, SIGNAL(clicked()), this, SLOT(findFiles()));
 	connect(ui->browseButton, SIGNAL(clicked()), this, SLOT(browse()));
+	connect(ui->pathLineEdit, SIGNAL(editingFinished()), this, SLOT(findFiles()));
+	connect(ui->subdirsCheckBox, SIGNAL(toggled(bool)), this, SLOT(findFiles()));
 	connect(ui->selectAllButton, SIGNAL(clicked()), this, SLOT(selectAll()));
 	connect(ui->selectNoneButton, SIGNAL(clicked()), this, SLOT(selectNone()));
 	connect(ui->editButton, SIGNAL(clicked()), this, SLOT(edit()));
@@ -41,10 +36,19 @@ MainWindow::MainWindow(QWidget *parent) :
 
 	connect(ui->optionsButton, SIGNAL(clicked()), &settingsDlg, SLOT(exec()));
 	connect(ui->aboutButton, SIGNAL(clicked()), this, SLOT(about()));
+
+	if(args.count() > 1)
+	{
+		ui->pathLineEdit->setText(args[1]);
+		findFiles();
+	} else
+		ui->pathLineEdit->setText(QDir::homePath());
 }
 
 MainWindow::~MainWindow()
 {
+	abortAction();
+
 	delete ui;
 }
 
@@ -63,14 +67,13 @@ void MainWindow::findFiles()
 {
 	QApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
 
-	ui->searchButton->setEnabled(false);
 	ui->browseButton->setEnabled(false);
 	ui->editButton->setEnabled(false);
 
-	progressBar->setMinimum(0);
-	progressBar->setMaximum(0);
-	progressBar->setFormat(tr("Searching files..."));
-	progressBar->show();
+	ui->progressBar->setMinimum(0);
+	ui->progressBar->setMaximum(0);
+	ui->progressBar->setFormat(tr("Searching files..."));
+	ui->progressBar->show();
 
 	ui->fileListWidget->clear();
 
@@ -117,13 +120,12 @@ void MainWindow::edit()
 
 	QApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
 
-	ui->searchButton->setEnabled(false);
 	ui->browseButton->setEnabled(false);
 	ui->editButton->setEnabled(false);
 
-	progressBar->setMaximum(cnt-1);
-	progressBar->setFormat("%v/%m (%p %)");
-	progressBar->show();
+	ui->progressBar->setMaximum(cnt-1);
+	ui->progressBar->setFormat("%v/%m (%p %)");
+	ui->progressBar->show();
 
 	fileEdit.setFileList(&filesToEdit);
 	fileEdit.setValues(ui->nameLineEdit->text(), ui->dateLineEdit->text(), ui->authorLineEdit->text(), ui->organizationLineEdit->text(), ui->cadLineEdit->text());
@@ -132,15 +134,14 @@ void MainWindow::edit()
 
 void MainWindow::updateProgress()
 {
-	progressBar->setValue( progressBar->value()+1 );
+	ui->progressBar->setValue( ui->progressBar->value()+1 );
 }
 
 void MainWindow::finished()
 {
-	progressBar->hide();
-	ui->statusBar->showMessage(tr("Done"));
+	ui->progressBar->hide();
+	ui->statusText->setText(tr("Done"));
 
-	ui->searchButton->setEnabled(true);
 	ui->browseButton->setEnabled(true);
 	ui->editButton->setEnabled(true);
 
@@ -151,7 +152,7 @@ void MainWindow::searchFinished()
 {
 	finished();
 
-	ui->statusBar->showMessage(tr("Found %1 files.").arg(ui->fileListWidget->count()));
+	ui->statusText->setText(tr("Found %1 files.").arg(ui->fileListWidget->count()));
 
 	if(ui->fileListWidget->count() > 0)
 	{
@@ -184,13 +185,8 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
 	switch( event->key() )
 	{
 	case Qt::Key_Escape:
-		if(fileFinder.isRunning())
-			fileFinder.terminate();
-		else if(fileEdit.isRunning())
-			fileEdit.terminate();
-
-		finished();
-		ui->statusBar->showMessage(tr("Aborted."));
+		abortAction();
+		ui->statusText->setText(tr("Aborted."));
 		break;
 	default:break;
 	}
@@ -228,4 +224,20 @@ void MainWindow::checkItems()
 		ui->nameLineEdit->setEnabled(true);
 		loadValues(checkedIt->text());
 	}
+}
+
+void MainWindow::abortAction()
+{
+	if(fileFinder.isRunning())
+		fileFinder.terminate();
+	else if(fileEdit.isRunning())
+		fileEdit.terminate();
+
+	finished();
+}
+
+void MainWindow::closeEvent(QCloseEvent *event)
+{
+	disconnect(ui->pathLineEdit, SIGNAL(editingFinished()), this, SLOT(findFiles()));
+	QMainWindow::closeEvent(event);
 }
