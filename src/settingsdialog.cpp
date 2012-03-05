@@ -34,7 +34,7 @@ void SettingsDialog::enableSystemContextMenuChanged(bool checked)
 	if( checked )
 	{
 		contextMenuSettings->setValue("ZIMA-STEP-Edit/.", tr("Open with ZIMA-STEP-Edit"));
-		contextMenuSettings->setValue("ZIMA-STEP-Edit/command/.", QString("\"%1\"").arg(QApplication::applicationFilePath().replace("/", "\\")) + " %1");
+		contextMenuSettings->setValue("ZIMA-STEP-Edit/command/.", QString("\"%1\"").arg(QApplication::applicationFilePath().replace("/", "\\")) + " \"%1\"");
 	} else {
 		contextMenuSettings->remove("ZIMA-STEP-Edit");
 	}

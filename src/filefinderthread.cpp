@@ -4,6 +4,13 @@
 #include <QStringList>
 #include <QDir>
 
+#ifdef Q_OS_WIN32
+#define SEPARATOR "\\"
+#else
+#define SEPARATOR "/"
+#endif
+
+
 FileFinderThread::FileFinderThread(QObject *parent) :
         QThread(parent)
 {
@@ -33,7 +40,7 @@ void FileFinderThread::find(const QString &path)
 
 	foreach(QString file, files)
 	{
-		emit fileFound(path + "/" + file);
+		emit fileFound(path + SEPARATOR + file);
 	}
 
 	if(browseSubdirs)
@@ -43,7 +50,7 @@ void FileFinderThread::find(const QString &path)
 		foreach(QString dir, subdirs)
 		{
 			//qDebug() << "Found dir" << path + "/" + dir;
-			find(path + "/" + dir);
+			find(path + SEPARATOR + dir);
 		}
 	}
 }

@@ -59,7 +59,7 @@
     <item>
      <widget class="QCheckBox" name="subdirsCheckBox">
       <property name="text">
-       <string>&amp;Including subdirectories</string>
+       <string>&amp;Include subdirectories</string>
       </property>
       <property name="checked">
        <bool>false</bool>
@@ -121,17 +121,31 @@
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLineEdit" name="nameLineEdit"/>
+        <widget class="QLineEdit" name="nameLineEdit">
+         <property name="maxLength">
+          <number>255</number>
+         </property>
+        </widget>
        </item>
        <item row="1" column="0">
         <widget class="QLabel" name="dateLabel">
+         <property name="toolTip">
+          <string>Format YYYY-mm-ddTHH:ii:ss</string>
+         </property>
          <property name="text">
           <string>Date</string>
          </property>
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QLineEdit" name="dateLineEdit"/>
+        <widget class="QLineEdit" name="dateLineEdit">
+         <property name="toolTip">
+          <string>Format YYYY-mm-ddTHH:ii:ss</string>
+         </property>
+         <property name="maxLength">
+          <number>100</number>
+         </property>
+        </widget>
        </item>
        <item row="2" column="0">
         <widget class="QLabel" name="authorLabel">
@@ -141,7 +155,11 @@
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QLineEdit" name="authorLineEdit"/>
+        <widget class="QLineEdit" name="authorLineEdit">
+         <property name="maxLength">
+          <number>255</number>
+         </property>
+        </widget>
        </item>
        <item row="3" column="0">
         <widget class="QLabel" name="organizationLabel">
@@ -151,17 +169,65 @@
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QLineEdit" name="organizationLineEdit"/>
+        <widget class="QLineEdit" name="organizationLineEdit">
+         <property name="maxLength">
+          <number>255</number>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="cadLabel">
+         <property name="toolTip">
+          <string>The system from which the data in this exchange structure originated.</string>
+         </property>
+         <property name="text">
+          <string>System</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="systemLineEdit">
+         <property name="toolTip">
+          <string>The system from which the data in this exchange structure originated.</string>
+         </property>
+         <property name="maxLength">
+          <number>255</number>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="authorizationLabel">
+         <property name="toolTip">
+          <string>The name and mailing address of the person who authorized the sending of the exchange structure.</string>
+         </property>
+         <property name="text">
+          <string>Authorization</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QLineEdit" name="authorizationLineEdit">
+         <property name="toolTip">
+          <string>The name and mailing address of the person who authorized the sending of the exchange structure.</string>
+         </property>
+        </widget>
        </item>
        <item row="4" column="0">
-        <widget class="QLabel" name="cadLabel">
+        <widget class="QLabel" name="preprocessorLabel">
+         <property name="toolTip">
+          <string>System used to create the exchange structure, including the system product name and version.</string>
+         </property>
          <property name="text">
-          <string>CAD</string>
+          <string>Preprocessor</string>
          </property>
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QLineEdit" name="cadLineEdit"/>
+        <widget class="QLineEdit" name="preprocessorLineEdit">
+         <property name="toolTip">
+          <string>System used to create the exchange structure, including the system product name and version.</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>

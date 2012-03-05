@@ -128,7 +128,9 @@ void MainWindow::edit()
 	ui->progressBar->show();
 
 	fileEdit.setFileList(&filesToEdit);
-	fileEdit.setValues(ui->nameLineEdit->text(), ui->dateLineEdit->text(), ui->authorLineEdit->text(), ui->organizationLineEdit->text(), ui->cadLineEdit->text());
+	fileEdit.setValues(ui->nameLineEdit->text(), ui->dateLineEdit->text(), ui->authorLineEdit->text(),
+			   ui->organizationLineEdit->text(), ui->preprocessorLineEdit->text(), ui->systemLineEdit->text(),
+			   ui->authorizationLineEdit->text());
 	fileEdit.start();
 }
 
@@ -176,7 +178,9 @@ void MainWindow::loadValues(QString path)
 		ui->dateLineEdit->setText(values[1]);
 		ui->authorLineEdit->setText(values[2]);
 		ui->organizationLineEdit->setText(values[3]);
-		ui->cadLineEdit->setText(values[4]);
+		ui->preprocessorLineEdit->setText(values[4]);
+		ui->systemLineEdit->setText(values[5]);
+		ui->authorizationLineEdit->setText(values[6]);
 	}
 }
 

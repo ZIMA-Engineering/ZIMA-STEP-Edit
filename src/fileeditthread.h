@@ -10,7 +10,7 @@ class FileEditThread : public QThread
 public:
 	explicit FileEditThread(QObject *parent = 0);
 	void run();
-	void setValues(QString name, QString date, QString author, QString organization, QString cad);
+	void setValues(QString name, QString date, QString author, QString organization, QString preprocessor, QString system, QString authorization);
 	void setFileList(QStringList *files);
 	QStringList readValues(QString path);
 	
@@ -25,7 +25,9 @@ private:
 	QString date;
 	QString author;
 	QString organization;
-	QString cad;
+	QString preprocessor;
+	QString system;
+	QString authorization;
 	QStringList *files;
 };
 
