@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.0" language="cs_CZ">
+<defaultcodec>UTF-8</defaultcodec>
 <context>
     <name>AboutDialog</name>
     <message>
@@ -29,8 +30,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../src/aboutdialog.cpp" line="29"/>
-        <source>&lt;ul&gt;&lt;li&gt;Developed by Jakub Skokan &amp;lt;&lt;a href=&quot;mailto:aither@havefun.cz&quot;&gt;aither@havefun.cz&lt;/a&gt;&amp;gt;&lt;/li&gt;&lt;li&gt;Icon created by AleÅ¡ Kocur &amp;lt;&lt;a href=&quot;mailto:kafe@havefun.cz&quot;&gt;kafe@havefun.cz&lt;/a&gt;&amp;gt;&lt;/li&gt;</source>
-        <translation type="unfinished"></translation>
+        <source>&lt;ul&gt;&lt;li&gt;Developed by Jakub Skokan &amp;lt;&lt;a href=&quot;mailto:aither@havefun.cz&quot;&gt;aither@havefun.cz&lt;/a&gt;&amp;gt;&lt;/li&gt;&lt;li&gt;Icon created by Aleš Kocur &amp;lt;&lt;a href=&quot;mailto:kafe@havefun.cz&quot;&gt;kafe@havefun.cz&lt;/a&gt;&amp;gt;&lt;/li&gt;</source>
+        <translation type="unfinished">&lt;ul&gt;&lt;li&gt;Vyvinul Jakub Skokan &amp;lt;&lt;a href=&quot;mailto:aither@havefun.cz&quot;&gt;aither@havefun.cz&lt;/a&gt;&amp;gt;&lt;/li&gt;&lt;li&gt;Ikonku vytvořil Aleš Kocur &amp;lt;&lt;a href=&quot;mailto:kafe@havefun.cz&quot;&gt;kafe@havefun.cz&lt;/a&gt;&amp;gt;&lt;/li&gt;</translation>
     </message>
 </context>
 <context>
