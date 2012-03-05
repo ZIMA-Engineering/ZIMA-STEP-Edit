@@ -26,9 +26,9 @@ AboutDialog::AboutDialog(QWidget *parent) :
 			"</p>"
 			"<h2>Authors:</h2>"
 	    ).arg(VERSION)
-	    + QString(
+	      + QString(tr(
 			"<ul><li>Developed by Jakub Skokan &lt;<a href=\"mailto:aither@havefun.cz\">aither@havefun.cz</a>&gt;</li>"
-			"<li>Icon created by Aleš Kocur &lt;<a href=\"mailto:kafe@havefun.cz\">kafe@havefun.cz</a>&gt;</li>"
+			"<li>Icon created by Aleš Kocur &lt;<a href=\"mailto:kafe@havefun.cz\">kafe@havefun.cz</a>&gt;</li>")
 	    ) + QString("</body></html")
 	);
 

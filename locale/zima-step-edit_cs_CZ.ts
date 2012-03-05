@@ -27,12 +27,17 @@ p, li { white-space: pre-wrap; }
         <source>&lt;h1&gt;ZIMA-STEP-Edit&lt;/h1&gt;&lt;p class=&quot;version&quot;&gt;%1&lt;/p&gt;&lt;p&gt;ZIMA-STEP-Edit was created by &lt;a href=&quot;http://www.zima-construction.cz/&quot;&gt;ZIMA-Construction&lt;/a&gt; and is released under the &lt;a href=&quot;http://www.gnu.org/&quot;&gt;GNU/GPLv3&lt;/a&gt; license.&lt;/p&gt;&lt;h2&gt;Authors:&lt;/h2&gt;</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../src/aboutdialog.cpp" line="29"/>
+        <source>&lt;ul&gt;&lt;li&gt;Developed by Jakub Skokan &amp;lt;&lt;a href=&quot;mailto:aither@havefun.cz&quot;&gt;aither@havefun.cz&lt;/a&gt;&amp;gt;&lt;/li&gt;&lt;li&gt;Icon created by AleÅ¡ Kocur &amp;lt;&lt;a href=&quot;mailto:kafe@havefun.cz&quot;&gt;kafe@havefun.cz&lt;/a&gt;&amp;gt;&lt;/li&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
         <location filename="../src/mainwindow.ui" line="20"/>
-        <source>ZIMA-STEP-Edit BETA</source>
+        <source>ZIMA-STEP-Edit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -56,86 +61,86 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="94"/>
+        <location filename="../src/mainwindow.ui" line="98"/>
         <source>Select &amp;all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="101"/>
+        <location filename="../src/mainwindow.ui" line="105"/>
         <source>Select &amp;none</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="110"/>
+        <location filename="../src/mainwindow.ui" line="114"/>
         <source>Values</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="119"/>
+        <location filename="../src/mainwindow.ui" line="123"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="133"/>
-        <location filename="../src/mainwindow.ui" line="143"/>
+        <location filename="../src/mainwindow.ui" line="137"/>
+        <location filename="../src/mainwindow.ui" line="147"/>
         <source>Format YYYY-mm-ddTHH:ii:ss</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="136"/>
+        <location filename="../src/mainwindow.ui" line="140"/>
         <source>Date</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="153"/>
+        <location filename="../src/mainwindow.ui" line="157"/>
         <source>Author</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="167"/>
+        <location filename="../src/mainwindow.ui" line="171"/>
         <source>Organization</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="181"/>
-        <location filename="../src/mainwindow.ui" line="191"/>
+        <location filename="../src/mainwindow.ui" line="185"/>
+        <location filename="../src/mainwindow.ui" line="195"/>
         <source>The system from which the data in this exchange structure originated.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="184"/>
+        <location filename="../src/mainwindow.ui" line="188"/>
         <source>System</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="201"/>
-        <location filename="../src/mainwindow.ui" line="211"/>
+        <location filename="../src/mainwindow.ui" line="205"/>
+        <location filename="../src/mainwindow.ui" line="215"/>
         <source>The name and mailing address of the person who authorized the sending of the exchange structure.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="204"/>
+        <location filename="../src/mainwindow.ui" line="208"/>
         <source>Authorization</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="218"/>
-        <location filename="../src/mainwindow.ui" line="228"/>
+        <location filename="../src/mainwindow.ui" line="222"/>
+        <location filename="../src/mainwindow.ui" line="232"/>
         <source>System used to create the exchange structure, including the system product name and version.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="221"/>
+        <location filename="../src/mainwindow.ui" line="225"/>
         <source>Preprocessor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="260"/>
+        <location filename="../src/mainwindow.ui" line="264"/>
         <source>&amp;Edit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="273"/>
+        <location filename="../src/mainwindow.ui" line="277"/>
         <source>Abou&amp;t...</source>
         <translation type="unfinished"></translation>
     </message>
