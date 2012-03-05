@@ -39,4 +39,5 @@ win32:RC_FILE = src/zima-step-edit.rc
 OTHER_FILES += \
     zima-step-edit.rc
 
+CODECFORTR = UTF-8
 TRANSLATIONS += locale/zima-step-edit_cs_CZ.ts

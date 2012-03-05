@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
 {
 	QCoreApplication::setOrganizationName("ZIMA-Construction");
 	QCoreApplication::setOrganizationDomain("zima-contruction.cz");
-	QCoreApplication::setApplicationName("ZIMA-Parts");
+	QCoreApplication::setApplicationName("ZIMA-STEP-Edit");
 
 	QTextCodec::setCodecForTr(QTextCodec::codecForName("utf8"));
 	QTextCodec::setCodecForCStrings(QTextCodec::codecForName("utf8"));
