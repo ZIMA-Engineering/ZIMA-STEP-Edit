@@ -7,7 +7,7 @@
     <message>
         <location filename="../src/aboutdialog.ui" line="14"/>
         <source>About ZIMA-STEP-Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>O programu ZIMA-STEP-Edit</translation>
     </message>
     <message>
         <location filename="../src/aboutdialog.ui" line="38"/>
@@ -21,17 +21,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/aboutdialog.ui" line="67"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zavřít</translation>
     </message>
     <message>
         <location filename="../src/aboutdialog.cpp" line="21"/>
         <source>&lt;h1&gt;ZIMA-STEP-Edit&lt;/h1&gt;&lt;p class=&quot;version&quot;&gt;%1&lt;/p&gt;&lt;p&gt;ZIMA-STEP-Edit was created by &lt;a href=&quot;http://www.zima-construction.cz/&quot;&gt;ZIMA-Construction&lt;/a&gt; and is released under the &lt;a href=&quot;http://www.gnu.org/&quot;&gt;GNU/GPLv3&lt;/a&gt; license.&lt;/p&gt;&lt;h2&gt;Authors:&lt;/h2&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;h1&gt;ZIMA-STEP-Edit&lt;/h1&gt;&lt;p class=&quot;version&quot;&gt;%1&lt;/p&gt;&lt;p&gt;ZIMA-STEP-Edit byl vytvořen firmou &lt;a href=&quot;http://www.zima-construction.cz/&quot;&gt;ZIMA-Construction&lt;/a&gt;a je vydán pod svobodnou licencí &lt;a href=&quot;http://www.gnu.org/&quot;&gt;GNU/GPLv3&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;Autoři:&lt;/h2&gt;</translation>
     </message>
     <message>
         <location filename="../src/aboutdialog.cpp" line="29"/>
         <source>&lt;ul&gt;&lt;li&gt;Developed by Jakub Skokan &amp;lt;&lt;a href=&quot;mailto:aither@havefun.cz&quot;&gt;aither@havefun.cz&lt;/a&gt;&amp;gt;&lt;/li&gt;&lt;li&gt;Icon created by Aleš Kocur &amp;lt;&lt;a href=&quot;mailto:kafe@havefun.cz&quot;&gt;kafe@havefun.cz&lt;/a&gt;&amp;gt;&lt;/li&gt;</source>
-        <translation type="unfinished">&lt;ul&gt;&lt;li&gt;Vyvinul Jakub Skokan &amp;lt;&lt;a href=&quot;mailto:aither@havefun.cz&quot;&gt;aither@havefun.cz&lt;/a&gt;&amp;gt;&lt;/li&gt;&lt;li&gt;Ikonku vytvořil Aleš Kocur &amp;lt;&lt;a href=&quot;mailto:kafe@havefun.cz&quot;&gt;kafe@havefun.cz&lt;/a&gt;&amp;gt;&lt;/li&gt;</translation>
+        <translation>&lt;ul&gt;&lt;li&gt;Vyvinul Jakub Skokan &amp;lt;&lt;a href=&quot;mailto:aither@havefun.cz&quot;&gt;aither@havefun.cz&lt;/a&gt;&amp;gt;&lt;/li&gt;&lt;li&gt;Ikonku vytvořil Aleš Kocur &amp;lt;&lt;a href=&quot;mailto:kafe@havefun.cz&quot;&gt;kafe@havefun.cz&lt;/a&gt;&amp;gt;&lt;/li&gt;</translation>
     </message>
 </context>
 <context>
@@ -44,131 +44,135 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/mainwindow.ui" line="36"/>
         <source>Path</source>
-        <translation type="unfinished"></translation>
+        <translation>Cesta</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="46"/>
         <source>&amp;Browse</source>
-        <translation type="unfinished"></translation>
+        <translation>Pr&amp;ohledávat</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="62"/>
         <source>&amp;Include subdirectories</source>
-        <translation type="unfinished"></translation>
+        <translation>Včetně &amp;podadresářů</translation>
+    </message>
+    <message>
+        <source>&amp;Options</source>
+        <translation type="obsolete">Možnosti</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="74"/>
-        <source>&amp;Options</source>
-        <translation type="unfinished"></translation>
+        <source>&amp;Settings</source>
+        <translation>&amp;Možnosti</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="98"/>
         <source>Select &amp;all</source>
-        <translation type="unfinished"></translation>
+        <translation>Vybrat &amp;vše</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="105"/>
         <source>Select &amp;none</source>
-        <translation type="unfinished"></translation>
+        <translation>Nevybrat &amp;nic</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="114"/>
         <source>Values</source>
-        <translation type="unfinished"></translation>
+        <translation>Hodnoty</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="123"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Název</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="137"/>
         <location filename="../src/mainwindow.ui" line="147"/>
         <source>Format YYYY-mm-ddTHH:ii:ss</source>
-        <translation type="unfinished"></translation>
+        <translation>Formát YYYY-mm-ddTHH:ii:ss</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="140"/>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Datum</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="157"/>
         <source>Author</source>
-        <translation type="unfinished"></translation>
+        <translation>Autor</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="171"/>
         <source>Organization</source>
-        <translation type="unfinished"></translation>
+        <translation>Organizace</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="185"/>
         <location filename="../src/mainwindow.ui" line="195"/>
         <source>The system from which the data in this exchange structure originated.</source>
-        <translation type="unfinished"></translation>
+        <translation>Systém, ze kterého pochází data v této struktuře.</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="188"/>
         <source>System</source>
-        <translation type="unfinished"></translation>
+        <translation>Systém</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="205"/>
         <location filename="../src/mainwindow.ui" line="215"/>
         <source>The name and mailing address of the person who authorized the sending of the exchange structure.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Jméno a mailová adresa osoby, která autorizovala sdílení souboru.</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="208"/>
         <source>Authorization</source>
-        <translation type="unfinished"></translation>
+        <translation>Autorizace</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="222"/>
         <location filename="../src/mainwindow.ui" line="232"/>
         <source>System used to create the exchange structure, including the system product name and version.</source>
-        <translation type="unfinished"></translation>
+        <translation>Systém použitý k vytvoření tohoto souboru, včetně názvu produktu a verze.</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="225"/>
         <source>Preprocessor</source>
-        <translation type="unfinished"></translation>
+        <translation>Preprocesor</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="264"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Upravit</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="277"/>
         <source>Abou&amp;t...</source>
-        <translation type="unfinished"></translation>
+        <translation>O pro&amp;gramu...</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="57"/>
         <source>Select directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyhledat složku</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="75"/>
         <source>Searching files...</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyledávání souborů...</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="145"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Hotovo</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="157"/>
         <source>Found %1 files.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nalezeno %1 souborů.</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="193"/>
         <source>Aborted.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zrušeno.</translation>
     </message>
 </context>
 <context>
@@ -176,22 +180,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/settingsdialog.ui" line="14"/>
         <source>ZIMA-STEP-Edit Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>ZIMA-STEP-Edit Nastavení</translation>
     </message>
     <message>
         <location filename="../src/settingsdialog.ui" line="24"/>
         <source>Enable system context menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktivovat kontextové menu v systému</translation>
     </message>
     <message>
         <location filename="../src/settingsdialog.ui" line="52"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Zavřít</translation>
     </message>
     <message>
         <location filename="../src/settingsdialog.cpp" line="36"/>
         <source>Open with ZIMA-STEP-Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Otevřít se ZIMA-STEP-Edit</translation>
     </message>
 </context>
 </TS>

@@ -71,7 +71,7 @@
       <item>
        <widget class="QPushButton" name="optionsButton">
         <property name="text">
-         <string>&amp;Options</string>
+         <string>&amp;Settings</string>
         </property>
         <property name="icon">
          <iconset resource="../zima-step-edit.qrc">
