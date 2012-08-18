@@ -24,9 +24,13 @@ p, li { white-space: pre-wrap; }
         <translation>&amp;Zavřít</translation>
     </message>
     <message>
-        <location filename="../src/aboutdialog.cpp" line="21"/>
         <source>&lt;h1&gt;ZIMA-STEP-Edit&lt;/h1&gt;&lt;p class=&quot;version&quot;&gt;%1&lt;/p&gt;&lt;p&gt;ZIMA-STEP-Edit was created by &lt;a href=&quot;http://www.zima-construction.cz/&quot;&gt;ZIMA-Construction&lt;/a&gt; and is released under the &lt;a href=&quot;http://www.gnu.org/&quot;&gt;GNU/GPLv3&lt;/a&gt; license.&lt;/p&gt;&lt;h2&gt;Authors:&lt;/h2&gt;</source>
-        <translation>&lt;h1&gt;ZIMA-STEP-Edit&lt;/h1&gt;&lt;p class=&quot;version&quot;&gt;%1&lt;/p&gt;&lt;p&gt;ZIMA-STEP-Edit byl vytvořen firmou &lt;a href=&quot;http://www.zima-construction.cz/&quot;&gt;ZIMA-Construction&lt;/a&gt;a je vydán pod svobodnou licencí &lt;a href=&quot;http://www.gnu.org/&quot;&gt;GNU/GPLv3&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;Autoři:&lt;/h2&gt;</translation>
+        <translation type="obsolete">&lt;h1&gt;ZIMA-STEP-Edit&lt;/h1&gt;&lt;p class=&quot;version&quot;&gt;%1&lt;/p&gt;&lt;p&gt;ZIMA-STEP-Edit byl vytvořen firmou &lt;a href=&quot;http://www.zima-construction.cz/&quot;&gt;ZIMA-Construction&lt;/a&gt;a je vydán pod svobodnou licencí &lt;a href=&quot;http://www.gnu.org/&quot;&gt;GNU/GPLv3&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;Autoři:&lt;/h2&gt;</translation>
+    </message>
+    <message>
+        <location filename="../src/aboutdialog.cpp" line="21"/>
+        <source>&lt;h1&gt;ZIMA-STEP-Edit&lt;/h1&gt;&lt;p class=&quot;version&quot;&gt;%1&lt;/p&gt;&lt;p&gt;ZIMA-STEP-Edit was created by &lt;a href=&quot;http://www.zima-engineering.cz/&quot;&gt;ZIMA-Engineering&lt;/a&gt; and is released under the &lt;a href=&quot;http://www.gnu.org/&quot;&gt;GNU/GPLv3&lt;/a&gt; license.&lt;/p&gt;&lt;h2&gt;Authors:&lt;/h2&gt;</source>
+        <translation>&lt;h1&gt;ZIMA-STEP-Edit&lt;/h1&gt;&lt;p class=&quot;version&quot;&gt;%1&lt;/p&gt;&lt;p&gt;ZIMA-STEP-Edit byl vytvořen firmou &lt;a href=&quot;http://www.zima-engineering.cz/&quot;&gt;ZIMA-Engineering&lt;/a&gt;a je vydán pod svobodnou licencí &lt;a href=&quot;http://www.gnu.org/&quot;&gt;GNU/GPLv3&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;Autoři:&lt;/h2&gt;</translation>
     </message>
     <message>
         <location filename="../src/aboutdialog.cpp" line="29"/>

@@ -1,0 +1,25 @@
+ZIMA-STEP-Edit
+==============
+
+Requirements
+------------
+Qt 4.x - modules core and gui, qmake
+
+Installation
+------------
+  tar xzf ZIMA-STEP-Edit-1.0.1-src.tar.gz
+  cd ZIMA-STEP-Edit-1.0.1-src
+  qmake
+  make
+
+Now you've got executable ZIMA-STEP-Edit, you can move it to /usr/local/bin
+or wherever you want.
+
+Useful information
+------------------
+System context menu works only in Windows. You have to run it once
+as admin so it can create the menu in registry.
+
+If you want to use translations, you have to put the translation file
+next to ZIMA-STEP-Edit executable or to subdir 'locale', otherwise it won't
+be found. ZIMA-STEP-Edit tries to load the language your system is using.

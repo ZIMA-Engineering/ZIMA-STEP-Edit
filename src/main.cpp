@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 
 	QTranslator translator;
 
-	QString filename = "zima-step-edit_" + QLocale::system().name();
+	QString filename = "ZIMA-STEP-Edit_" + QLocale::system().name();
 	QStringList paths;
 
 	paths

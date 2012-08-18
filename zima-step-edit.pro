@@ -6,7 +6,7 @@
 
 QT       += core gui
 
-TARGET = zima-step-edit
+TARGET = ZIMA-STEP-Edit
 TEMPLATE = app
 
 win32:INCLUDEPATH += ../
@@ -37,7 +37,10 @@ win32:CONFIG += static
 win32:RC_FILE = src/zima-step-edit.rc
 
 OTHER_FILES += \
-    zima-step-edit.rc
+    zima-step-edit.rc \
+    README \
+    LICENSE \
+    AUTHORS
 
 CODECFORTR = UTF-8
-TRANSLATIONS += locale/zima-step-edit_cs_CZ.ts
+TRANSLATIONS += locale/ZIMA-STEP-Edit_cs_CZ.ts
