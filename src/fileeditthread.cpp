@@ -14,7 +14,7 @@ void FileEditThread::run()
 {
 	bool keepOldName = files->count() > 1;
 
-	foreach(QString file, *files)
+	for(const auto &file : *files)
 	{
 		//qDebug() << "Editing file" << file;
 
@@ -171,11 +171,11 @@ QString FileEditThread::parseSection(const QString &from, const int pos, const b
 	if(brackets)
 	{
 		section.remove(0, 1+section.indexOf('('));
-		section.chop(section.count()-section.lastIndexOf(')'));
+		section.chop(section.size()-section.lastIndexOf(')'));
 	}
 
 	section.remove(0, 1+section.indexOf('\''));
-	section.chop(section.count()-section.lastIndexOf('\''));
+	section.chop(section.size()-section.lastIndexOf('\''));
 
 	return section;
 }

@@ -38,7 +38,7 @@ void FileFinderThread::find(const QString &path)
 
 	files = dir.entryList(filters, QDir::Files);
 
-	foreach(QString file, files)
+	for(const auto &file : files)
 	{
 		emit fileFound(path + SEPARATOR + file);
 	}
@@ -47,10 +47,10 @@ void FileFinderThread::find(const QString &path)
 	{
 		subdirs = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
 
-		foreach(QString dir, subdirs)
+		for(const auto &dirName : subdirs)
 		{
 			//qDebug() << "Found dir" << path + "/" + dir;
-			find(path + SEPARATOR + dir);
+			find(path + SEPARATOR + dirName);
 		}
 	}
 }

@@ -5,6 +5,7 @@
 #include <QApplication>
 #include <QCursor>
 #include <QFileDialog>
+#include <QDir>
 #include <QListWidgetItem>
 
 MainWindow::MainWindow(QWidget *parent) :

@@ -8,8 +8,8 @@ class FileEditThread : public QThread
 {
 	Q_OBJECT
 public:
-	explicit FileEditThread(QObject *parent = 0);
-	void run();
+	explicit FileEditThread(QObject *parent = nullptr);
+	void run() override;
 	void setValues(QString name, QString date, QString author, QString organization, QString preprocessor, QString system, QString authorization);
 	void setFileList(QStringList *files);
 	QStringList readValues(QString path);

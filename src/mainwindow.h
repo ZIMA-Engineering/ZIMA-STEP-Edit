@@ -19,9 +19,9 @@ class MainWindow : public QMainWindow
 	Q_OBJECT
 	
 public:
-	explicit MainWindow(QWidget *parent = 0);
+	explicit MainWindow(QWidget *parent = nullptr);
 	~MainWindow();
-	void keyPressEvent(QKeyEvent *event);
+	void keyPressEvent(QKeyEvent *event) override;
 	
 public slots:
 	void addFileToList(QString path);
@@ -30,7 +30,7 @@ public slots:
 	void searchFinished();
 
 protected:
-	void closeEvent(QCloseEvent *event);
+	void closeEvent(QCloseEvent *event) override;
 
 private:
 	void loadValues(QString path);

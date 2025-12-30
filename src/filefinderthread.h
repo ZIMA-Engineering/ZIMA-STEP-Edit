@@ -8,8 +8,8 @@ class FileFinderThread : public QThread
 {
 	Q_OBJECT
 public:
-	explicit FileFinderThread(QObject *parent = 0);
-	void run();
+	explicit FileFinderThread(QObject *parent = nullptr);
+	void run() override;
 	void setStartPath(QString path, bool subdirs);
 	
 signals:

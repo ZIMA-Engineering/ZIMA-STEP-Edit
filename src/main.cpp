@@ -1,5 +1,4 @@
 #include <QApplication>
-#include <QTextCodec>
 #include <QTranslator>
 #include <QLocale>
 #include "mainwindow.h"
@@ -15,16 +14,14 @@ int main(int argc, char *argv[])
 	QTranslator translator;
 
 	QString filename = "ZIMA-STEP-Edit_" + QLocale::system().name();
-	QStringList paths;
-
-	paths
+	const QStringList paths = QStringList()
 			<< filename
 			<< QApplication::applicationDirPath() + "/" + filename
 			<< QApplication::applicationDirPath() + "/locale/" + filename
 			<< ("locale/" + filename)
 			<< (":/" + filename);
 
-	foreach(QString path, paths)
+	for(const auto &path : paths)
 		if( translator.load(path) )
 		{
 			a.installTranslator(&translator);

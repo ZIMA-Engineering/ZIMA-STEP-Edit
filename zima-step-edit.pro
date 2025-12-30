@@ -8,6 +8,7 @@ QT       += core gui widgets
 
 TARGET = ZIMA-STEP-Edit
 TEMPLATE = app
+CONFIG += c++17
 
 win32:INCLUDEPATH += ../
 VPATH += ./src
