@@ -7,8 +7,8 @@ Qt 4.x - modules core and gui, qmake
 
 Installation
 ------------
-  tar xzf ZIMA-STEP-Edit-1.0.1-src.tar.gz
-  cd ZIMA-STEP-Edit-1.0.1-src
+  tar xzf ZIMA-STEP-Edit-2.0.0-src.tar.gz
+  cd ZIMA-STEP-Edit-2.0.0-src
   qmake
   make
 
