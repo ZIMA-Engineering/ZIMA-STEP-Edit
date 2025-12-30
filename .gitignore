@@ -1,0 +1,11 @@
+.qmake.stash
+Makefile
+nix-build
+zima-step-edit.pro.user*
+ZIMA-STEP-Edit
+locale/*.qm
+*.o
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
