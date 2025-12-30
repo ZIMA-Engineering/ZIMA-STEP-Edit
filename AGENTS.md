@@ -7,7 +7,7 @@
 - Keep README/LICENSE/AUTHORS at the repo root; avoid adding build outputs to version control.
 
 ## Build, Test, and Development Commands
-- Always verify changes with a full build: `qmake zima-step-edit.pro` then `make` (Qt 6). Use `CONFIG+=release` or `CONFIG+=debug` as needed.
+- Always verify every change with a build: run `qmake zima-step-edit.pro` (Qt 6) and `make`; use `CONFIG+=release` or `CONFIG+=debug` as needed.
 - `make clean`: remove build artifacts.
 - Run locally with `./ZIMA-STEP-Edit` from the build folder; place translation `.qm` files next to the binary or in `locale/`.
 
